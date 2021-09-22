@@ -10,6 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@popperjs/core": "^2.9.1",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
@@ -19,6 +20,7 @@
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
         "vue": "^2.6.12",
+        "vue-loader": "^15.9.8",
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
