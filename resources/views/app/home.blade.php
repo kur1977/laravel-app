@@ -1,5 +1,5 @@
 @extends('layouts.app')
-asdasd
+
 @section('hero')
     @include('app.partials.hero')
 @endsection
