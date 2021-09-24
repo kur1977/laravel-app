@@ -43,4 +43,17 @@ class Article extends Model
     public function scopeLastLimit($query, $limit){
         return $query->with('state', 'tags')->orderBy('created_at', 'desc')->limit($limit)->get();
     }
+
+    public function scopeAllPaginate($query, $limit)
+    {
+        return $query->with('state', 'tags')->orderBy('created_at', 'desc')->paginate($limit);
+    }
+
+    public function scopeFindBySlug($query, $slug){
+        return $query->with('state', 'tags', 'comments')->where('slug', $slug)->firstOrFail();
+    }
+
+    public function scopeFindByTag($query, $limit){
+        return $query->with('state', 'tags')->orderBy('created_at', 'desc')->paginate($limit);
+    }
 }
